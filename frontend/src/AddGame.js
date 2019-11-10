@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-class AddGame extends Comment{
+class AddGame extends React.Component{
     render(){
         return(
             <div>
@@ -21,7 +21,7 @@ class AddGame extends Comment{
             <input type='int' name='max_num_of_players' />
             <br />
             Description:
-                <textarea>Please enter a description of this game =D!</textarea>
+                <textarea name='description'>Please enter a description of this game =D!</textarea>
             <br />
             <input type="submit" value="Submit" />
             </form>
