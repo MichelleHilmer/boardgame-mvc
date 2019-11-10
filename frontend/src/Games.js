@@ -1,33 +1,37 @@
 import React from 'react';
 
-class Game extends React.Component {
+import axios from 'axios';
+
+class GameList extends React.Component {
+    state ={
+        games:[]
+    }
+
+    componentDidMount(){
+        axios.get('http://localhost:8080/game')
+        .then(res => {
+            const games = res.data;
+            this.setState({ games });
+            console.log(this.state.games)
+        })
+        
+    }
+
     render(){
         return(
-            <div>
-            <form inline={true}>
-                Title:
-                <input type="text" name='name' />
-            <br />
-            Length of game:
-            <input type="int" name='min_length_of_game' />
-            minutes to
-            <input type="int" name='max_length_of_game' />
-            minutes
-            <br />
-            Number of Players
-            <input type='int' name='min_num_of_players' />
-            people to
-            <input type='int' name='max_num_of_players' />
-            <br />
-            Description:
-                <textarea name='description'>Please enter a description of this game =D!</textarea>
-            <br />
-            <input type="submit" value="Submit" />
-            </form>
-            </div>
+            <ul>
+                {this.state.games.map(game =><div> <li>{game.name}</li>
+                <li>{game.minNumOfPlayers}-{game.maxNumOfPlayers}</li>
+                <li>{game.minLengthOfGame}- {game.maxLengthOfGame}</li>
+                <li>{game.description}</li>
+                ----------------------------------------------------------
+                
+                </div>
+                )}
+            </ul>
         );
     }
 }
 
 
-export default Game
+export default GameList

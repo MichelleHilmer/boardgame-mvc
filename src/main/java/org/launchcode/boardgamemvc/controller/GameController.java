@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
+//@CrossOrigin("http://localhost:3000")
 @RequestMapping("/game")
 public class GameController {
     private GameService gameService;
@@ -18,6 +20,7 @@ public class GameController {
     }
 
     @GetMapping
+    @CrossOrigin("http://localhost:3000")
     @ResponseStatus(HttpStatus.OK)
     public List<Game> getAll(){
         return gameService.getAll();
