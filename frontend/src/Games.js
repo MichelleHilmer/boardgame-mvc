@@ -20,10 +20,10 @@ class GameList extends React.Component {
     render(){
         return(
             <ul>
-                {this.state.games.map(game =><div> <li>{game.name}</li>
-                <li>{game.minNumOfPlayers}-{game.maxNumOfPlayers}</li>
-                <li>{game.minLengthOfGame}- {game.maxLengthOfGame}</li>
-                <li>{game.description}</li>
+                {this.state.games.map(game =><div> <li>Game Title : {game.gameName}</li>
+                <li># of Players : {game.minNumOfPlayers} players to {game.maxNumOfPlayers} players</li>
+                <li>Game Length : {game.minLengthOfGame} minutes to {game.maxLengthOfGame} minutes</li>
+                <li>Game Description : {game.description}</li>
                 ----------------------------------------------------------
                 
                 </div>

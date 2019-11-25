@@ -19,8 +19,8 @@ public class Game {
     @Column(name = "id")
     private Integer id;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "gameName")
+    private String gameName;
 
     @Column(name = "description")
     private String description;
