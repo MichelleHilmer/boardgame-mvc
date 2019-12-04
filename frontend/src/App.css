@@ -20,3 +20,20 @@
 .App-link {
   color: #09d3ac;
 }
+
+.container {
+  display: flex;
+}
+label,
+#input-field {
+  flex: 1;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: space-around;
+  color: #b6d8cf;
+  font-size:30px;
+  text-transform: uppercase;
+  list-style: none;
+}

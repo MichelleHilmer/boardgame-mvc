@@ -1,11 +1,14 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
 
 
 class Search extends React.Component{
     render(){
         return(
             <div>
-            <h1>Search Page</h1>
+            <Button  variant="contained" color="primary">
+                Search
+            </Button>
             </div>
         );
     }

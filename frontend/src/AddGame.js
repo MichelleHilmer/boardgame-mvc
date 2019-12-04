@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
+
 class GameForm extends React.Component {
     constructor(props) {
         super(props)
@@ -30,7 +31,7 @@ class GameForm extends React.Component {
     render() {
         const { gameName, minNumOfPlayers, maxNumOfPlayers, minLengthOfGame, maxLengthOfGame, description} = this.state
         return (
-            <div>
+            <div className="container">
             <form onSubmit={this.handleSubmit}>
                 <label>
                 Title:
